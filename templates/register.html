@@ -1,0 +1,23 @@
+<!-- templates/register.html -->
+{% extends 'base.html' %}
+
+{% block header %}
+    <script src="{{ url_for('static', filename='js/user.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <h2>User Registration</h2>
+
+    <div id="error-message" style="color: red;"></div>
+
+    <form id="registration-form" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" id="register_button">Register</button>
+    </form>
+
+{% endblock %}
